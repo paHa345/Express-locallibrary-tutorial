@@ -152,7 +152,7 @@ exports.genre_update_get = function(req, res) {
 // Handle Genre update on POST.
 exports.genre_update_post = [
 
-body('name', 'Name must not be empty.').trim().isLength({ min: 10 }).escape(),
+body('name', 'Name must not be empty.').trim().isLength({ min: 1 }).escape(),
 
 function(req, res, next){
   const errors = validationResult(req);
